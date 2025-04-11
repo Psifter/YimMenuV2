@@ -10,10 +10,10 @@ namespace YimMenu::Submenus
 	    Submenu::Submenu("Recovery")
 	{
 		auto shopping = std::make_shared<Category>("Shopping");
-		auto heist = std::make_shared<Category>("Heists");
-		auto money_ranks = std::make_shared<Category>("Money & Ranks");
+		auto missions = std::make_shared<Category>("Missions");
 		auto vehiclesGroup = std::make_shared<Group>("Vehicles");
-		auto cayoGroup = std::make_shared<Group>("Cayo Perico");
+		auto generalGroup = std::make_shared<Group>("General");
+		auto cayoPericoGroup = std::make_shared<Group>("Cayo Perico");
 
 		vehiclesGroup->AddItem(std::make_shared<BoolCommandItem>("dlcvehicles"_J));
 
@@ -26,18 +26,17 @@ namespace YimMenu::Submenus
 				}
 			}
 		}));
-		cayoGroup->AddItem(std::make_shared<CommandItem>("skipcayosetup"_J));
-		cayoGroup->AddItem(std::make_shared<CommandItem>("skipcayocooldown"_J));
 
+		generalGroup->AddItem(std::make_shared<CommandItem>("playallmissionssolo"_J));
 
-		money_ranks->AddItem(std::make_shared<StringCommandItem>("rankwanted"_J, "Rank Wanted"));
-		money_ranks->AddItem(std::make_shared<CommandItem>("setrprank"_J, "Set Rank"));
+		cayoPericoGroup->AddItem(std::make_shared<CommandItem>("skipcayosetup"_J));
+		cayoPericoGroup->AddItem(std::make_shared<CommandItem>("skipcayocooldown"_J));
 
 		shopping->AddItem(vehiclesGroup);
-		heist->AddItem(cayoGroup);
+		missions->AddItem(generalGroup);
+		missions->AddItem(cayoPericoGroup);
 		AddCategory(std::move(shopping));
-		AddCategory(std::move(money_ranks));
-		AddCategory(std::move(heist));
+		AddCategory(std::move(missions));
 		AddCategory(BuildStatEditorMenu());
 		AddCategory(BuildTransactionsMenu());
 	}
