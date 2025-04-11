@@ -18,13 +18,13 @@ namespace YimMenu::Features
 			Stats::SetInt("MPX_H4CNF_HEL_DISRP", 3);
 			Stats::SetInt("MPX_H4CNF_TARGET", 3);
 			Stats::SetInt("MPX_H4CNF_APPROACH", -1);
-			Stats::SetInt("MPX_H4LOOT_CASH_V", 250000);
-			Stats::SetInt("MPX_H4LOOT_WEED_V", 362526);
-			Stats::SetInt("MPX_H4LOOT_COKE_V", 500000);
+			Stats::SetInt("MPx_H4LOOT_GOLD_I", -1);
+			Stats::SetInt("MPx_H4LOOT_GOLD_C", -1);
+			Stats::SetInt("MPx_H4LOOT_PAINT", -1);
 			Stats::SetInt("MPX_H4_PROGRESS", 130667);
-			Stats::SetInt("MPX_H4LOOT_CASH_I_SCOPED", -1);
-			Stats::SetInt("MPX_H4LOOT_WEED_I_SCOPED", -1);
-			Stats::SetInt("MPX_H4LOOT_COKE_I_SCOPED", -1);
+			Stats::SetInt("MPx_H4LOOT_GOLD_I_SCOPED", -1);
+			Stats::SetInt("MPx_H4LOOT_GOLD_C_SCOPED", -1);
+			Stats::SetInt("MPx_H4LOOT_PAINT_SCOPED", -1);
 			Stats::SetInt("MPX_H4_MISSIONS", 65535);
 			Stats::SetInt("MPX_H4_PLAYTHROUGH_STATUS", 40000);
 		}
